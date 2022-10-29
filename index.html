@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Jazz Webpage">
+    <meta name="creator" content="Heskan">
+
+    <!-- Sayfa bilgileri -->
+    <title>Jazz Webpage | Ana Sayfa</title>
+    <meta name="title" content="Jazz Webpage | Ana Sayfa">
+    <meta name="description" content="This is a Jazz Webpage">
+    <meta name="keywords" content="Jazz Webpage, corporate website">
+    <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"> -->
+    <meta name="rating" content="general">
+
+    <!-- Open Graph Genel -->
+    <meta property="og:site_name" content="Jazz Webpage">
+    <meta property="og:locale" content="tr">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://website.com/">
+    <meta property="og:title" content="Jazz Webpage">
+    <meta property="og:description" content="This is a Jazz Webpage">
+    <!-- <meta property="og:image" content="img/og-img.png"> -->
+
+    <!-- Open Graph Twitter -->
+    <meta property="twitter:creator" content="@jazz">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:domain" content="website.com">  
+    <meta property="twitter:url" content="http://website.com/">
+    <meta property="twitter:title" content="Jazz Webpage">
+    <meta property="twitter:description" content="This is a Jazz Webpage">
+    <!-- <meta property="twitter:image" content="img/og-img.png"> -->
+    <meta property="twitter:image:alt" content="Jazz Webpage Image">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
+
+    
+</head>
+<body>
+
+    <div class="window">
+        <header>
+            <div class="logo">
+                <a href="#"><img src="img/logo.png" alt="Logo"></a>
+            </div>
+            <nav>
+                <div id="open"><i class="fa-solid fa-bars"></i></div>
+                <ul id="navigation">
+                    <div id="close"><i class="fa-solid fa-xmark"></i></div>
+                    <li><a data="0" class="active" href="#">HOME</a></li>
+                    <li><a data="1" id="event" href="#">EVENTS</a></li>
+                    <li><a data="2" href="#">ABOUT</a></li>
+                    <li><a data="3" href="#">CONTACT US</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section id="section">
+            <div class="home">
+                <h2>Jazz<br><span>CONCERT</span></h2>
+                <div class="book-date">
+                    <a href="$">BOOK NOW</a>
+                    <span>24.12.2020</span>
+                </div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo unde veritatis, quasi praesentium iure nihil, blanditiis repellat reiciendis voluptate fugiat mollitia. Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit ratione quae fugiat veritatis aut consequatur unde repellendus doloremque, asperiores aliquid id dolorum ipsa fugit natus harum alias. Nemo nulla adipisci, laborum officiis et quod autem animi quas enim exercitationem nobis quae obcaecati eius necessitatibus corrupti hic magnam eaque esse odit!</p>
+                <div class="separate"></div>
+                <img class="signature" src="img/sign.png" alt="Signature">
+            </div>
+            <div class="events">
+                <h2>Coming<br><span>CONCERT</span></h2>
+                <div class="table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th min-width="100px" width="120px">Date</th>
+                                <th>Location</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20.06.2022</td>
+                                <td>Tokat Kültür Merkezi</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="about">
+                <h2>About<br><span>ME</span></h2>
+                <p>Hello !<br>My name is John,</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis ipsum dolorem molestiae. Sunt in expedita aperiam doloribus provident sequi! Eaque architecto explicabo ipsam molestiae illum amet dolore deleniti maxime quod.</p>
+            </div>
+            <div class="contactus">
+                <h2>Contact<br><span>US</span></h2>
+                <p>Hello!<br>Come on call me</p>
+                <div class="phone"><a href="#">0530 123 12 12</a></div>
+            </div>
+        </section>
+        <footer>
+            <div class="copyright">
+                <ul>
+                    <li>BUILDING NAME, MAIN ROAD, COUNTRY</li>
+                    <li><a href="#">COPYRIGH &copy JAZZ CLUB</a></li>
+                    <li><a href="#">TERMS & CONDITIONS</a></li>
+                    <li><a href="#">DISCLAIMER</a></li>
+                </ul>
+            </div>
+            <div class="socials">
+                <ul>
+                    <li><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+
+        const section = document.querySelector('#section');
+        const sectionDivs = document.querySelectorAll('#section > div');
+        const nav = document.querySelector('#navigation');
+
+        const navA = document.getElementById('navigation');
+
+        navA.addEventListener('click',function(e){
+            for (let i = 0; i < nav.children.length; i++) {
+                nav.children[i].firstChild.classList.remove('active');
+            }
+            e.target.classList.add("active");
+        })
+
+        document.addEventListener('DOMContentLoaded',function(){
+            for (let i = 0; i < sectionDivs.length; i++) {
+
+                if(sectionDivs[0] == sectionDivs[i]){
+                    sectionDivs[i].style.opacity = "1";
+                    sectionDivs[i].style.visibility = "visible";
+                }
+                else{
+                    sectionDivs[i].style.opacity = "0";
+                    sectionDivs[i].style.visibility = "hidden";
+                }
+
+            }
+        });
+
+        nav.addEventListener('click', myFunction);
+
+        function myFunction(e){
+            const value = e.target.attributes.data.textContent;
+            section.scrollLeft = value * section.offsetWidth;
+            nav.classList.toggle('open-menu');
+            for (let i = 0; i < sectionDivs.length; i++) {                
+                
+                if(sectionDivs[value] == sectionDivs[i]){
+                    sectionDivs[i].style.opacity = "1";
+                    sectionDivs[i].style.visibility = "visible";
+                    sectionDivs[i].style.transition = "500ms ease";
+                }
+                else{
+                    sectionDivs[i].style.opacity = "0";
+                    sectionDivs[i].style.visibility = "hidden";
+                    sectionDivs[i].style.transition = "500ms ease";
+                }
+                
+            }
+        }
+
+        const openMenu = document.getElementById('open');
+        const closeMenu = document.getElementById('close');
+
+        openMenu.addEventListener('click', function(){
+            nav.classList.toggle('open-menu');
+        })
+
+        closeMenu.addEventListener('click', function(){
+            nav.classList.toggle('open-menu');
+        })
+
+    </script>
+
+</body>
+</html>
